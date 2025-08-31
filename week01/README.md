@@ -61,7 +61,7 @@ touch results/tables/summary.tsv
 
 Relative path examples:
 ```
-cat "data/raw/sample1.txt
+cat data/raw/sample1.txt
 ```
 Absolute path examples (your path may differ):
 ```
@@ -84,6 +84,7 @@ https://github.com/AnushKarampuri00/AppliedBioinfo
 
  
  
+
 
 
 
