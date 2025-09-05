@@ -1,1 +1,3 @@
-# AppliedBioinfo_Week1
+# AppliedBioinformatics
+
+## This repository contains the weekly assignments 
