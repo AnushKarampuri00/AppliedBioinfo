@@ -28,7 +28,7 @@ conda activate bioinfo
 samtools --version
 ```
 
-# Sam tools version iam using is:
+* Sam tools version iam using is:
 ```
 samtools 1.22.1
 Using htslib 1.22.1
@@ -59,11 +59,11 @@ touch results/tables/summary.tsv
 
 ## 6. Access files using relative and absolute paths
 
-Relative path examples:
+Relative path :
 ```
 cat data/raw/sample1.txt
 ```
-Absolute path examples (your path may differ):
+Absolute path :
 ```
 /home/anushkarampuri/projects/AppliedBioinfo_Week1/week01/data/raw/sample1.txt
 ```
@@ -84,6 +84,7 @@ https://github.com/AnushKarampuri00/AppliedBioinfo
 
  
  
+
 
 
 
