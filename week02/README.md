@@ -164,11 +164,12 @@ zgrep -v "^#" Amphilophus_citrinellus.Midas_v5.115.gff3.gz | cut -f3 | sort | un
 * Features like pseudogenic transcripts were new and interesting, highlighting genome complexity and evolution.
 
 
-* All commands used to generate this analysis are provided in the file:
+**All commands used to generate this analysis are provided in the file:**
 
 ```
 GFF_file_analysis.sh
 ```
+
 
 
 
