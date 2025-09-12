@@ -57,7 +57,7 @@ awk '$3=="gene" || $3=="transcript"' Acetonema_longum_dsm_6540_gca_000219125.ASM
 ```
 
 
-# IGV Genome Visualization
+## **IGV Genome Visualization**
 
 **Import the downloaded FASTA and GFF files into IGV application. - I have selected Acetonema longum genome and annotations**
 
@@ -86,9 +86,12 @@ awk '$3=="gene" || $3=="transcript"' Acetonema_longum_dsm_6540_gca_000219125.ASM
 ![Figure:5 Compare the visualization of the original GFF with the simplified GFF](images/GFF_File_comp_narrower.png)
 *Figure 5: Compare the visualization of the original GFF with the simplified GFF*
 
+* **Note:** The translation table needs to be viewed in the correct strand orientation (+ or -). Without considering strand direction, codons and start/stop signals appear incorrect, but with proper orientation the reading frame aligns correctly and the protein-coding sequence makes biological sense.
+
 **Start and stop codons of a specific gene**
 
 ![Figure:6 The Start and Stop codons of a gene in the genome](images/start_stop_codon.png)
 *Figure 6: The Start and Stop codons of a gene in the genome*
+
 
 
