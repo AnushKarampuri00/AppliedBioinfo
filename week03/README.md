@@ -64,26 +64,31 @@ f3
 **Import the downloaded FASTA and GFF files into IGV application. - I have selected Acetonema longum genome and annotations**
 
 ![Figure:1 Visualization of the Acetonema_longum genome with annotatinos](images/Acetonema_longum1.png)
+*Figure:1 Visualization of the Acetonema_longum genome with annotatinos*
 
-![Figure:2 Visualization of the Acetonema_longum genome with annotatinos](images/Acetonema_longum1.png)
-
+![Figure:2 Visualization of the Acetonema_longum genome with annotatinos](images/Acetonema_longum2.png)
+*Figure:2 Visualization of the Acetonema_longum genome with annotatinos*
 
 **Visualizing the simplified GFF file**
 
-![Figure:3 Visualization of the Simplified GFF file](images/Simplified GFF annotation.png)
+![Figure:3 Visualization of the Simplified GFF file](images/Simplified_GFF_annotation.png)
+*Figure:3 Visualization of the Simplified GFF file*
 
 **Compare the visualization of the original GFF with the simplified GFF**
 
 ![Figure:4 Compare the visualization of the original GFF with the simplified GFF](images/GFF_File_comp_narrower.png)
-![Figure:5 Compare the visualization of the original GFF with the simplified GFF](images/GFF_File_comp_wider.png)
+*Figure:4 Compare the visualization of the original GFF with the simplified GFF*
 
+![Figure:5 Compare the visualization of the original GFF with the simplified GFF](images/GFF_File_comp_wider.png)
+*Figure:5 Compare the visualization of the original GFF with the simplified GFF*
 
 **Visualising the translation table and the orientation**
 
 ![Figure:6 Compare the visualization of the original GFF with the simplified GFF](images/GFF_File_comp_narrower.png)
-
+*Figure:6 Compare the visualization of the original GFF with the simplified GFF*
 
 **Start and stop codons of a specific gene**
 
 ![Figure:7 The Start and Stop codons of a gene in the genome](images/GFF_File_comp_narrower.png)
+*Figure:7 The Start and Stop codons of a gene in the genome*
 
