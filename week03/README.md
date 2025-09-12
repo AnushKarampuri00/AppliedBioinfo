@@ -61,7 +61,6 @@ f3
 
 # IGV Genome Visualization
 
-![Use IGV to visualize your genome and the annotations relative to the genome.](images/Acetpnema_longum1.png)
 
 
 
