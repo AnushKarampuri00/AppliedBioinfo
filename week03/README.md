@@ -51,10 +51,8 @@ cut -f3 Acetonema_longum_dsm_6540_gca_000219125.ASM21912v1.62.gff3 | sort | uniq
 ## 2. From your GFF file, separate the intervals of type "gene" or "transcript" into a different file.
 
 ```bash
-grep "^#" Acetonema_longum_dsm_6540_gca_000219125.ASM21912v1.62.gff3 > simplified.gff3
 
-grep -w -E "gene|transcript" Acetonema_longum_dsm_6540_gca_000219125.ASM21912v1.62.gff3 >> simplified.gf
-f3
+awk '$3=="gene" || $3=="transcript"' Acetonema_longum_dsm_6540_gca_000219125.ASM21912v1.62.gff3 > simplified.gff3
 
 ```
 
@@ -64,31 +62,33 @@ f3
 **Import the downloaded FASTA and GFF files into IGV application. - I have selected Acetonema longum genome and annotations**
 
 ![Figure:1 Visualization of the Acetonema_longum genome with annotatinos](images/Acetonema_longum1.png)
-*Figure:1 Visualization of the Acetonema_longum genome with annotatinos*
+*Figure 1: Visualization of the Acetonema_longum genome with annotatinos*
 
 ![Figure:2 Visualization of the Acetonema_longum genome with annotatinos](images/Acetonema_longum2.png)
-*Figure:2 Visualization of the Acetonema_longum genome with annotatinos*
+*Figure 2: Visualization of the Acetonema_longum genome with annotatinos*
 
 **Visualizing the simplified GFF file**
 
 ![Figure:3 Visualization of the Simplified GFF file](images/Simplified_GFF_annotation.png)
-*Figure:3 Visualization of the Simplified GFF file*
+*Figure 3: Visualization of the Simplified GFF file*
 
 **Compare the visualization of the original GFF with the simplified GFF**
 
-![Figure:4 Compare the visualization of the original GFF with the simplified GFF](images/GFF_File_comp_narrower.png)
-*Figure:4 Compare the visualization of the original GFF with the simplified GFF*
+![Figure:4 Compare the visualization of the original GFF with the simplified GFF](images/Simplified_gff_comparision.png)
+*Figure 4: Compare the visualization of the original GFF with the simplified GFF*
 
-![Figure:5 Compare the visualization of the original GFF with the simplified GFF](images/GFF_File_comp_wider.png)
-*Figure:5 Compare the visualization of the original GFF with the simplified GFF*
+* **Note :** When visualized in IGV, the original GFF file displayed a large number of features, including genes, transcripts, exons, coding sequences (CDS), UTRs, and regulatory elements. While this provided a comprehensive view of the genome, it resulted in a dense and cluttered visualization, making it difficult to focus on the higher-level genomic intervals.
+* In contrast, the simplified GFF file, containing only gene and transcript features, produced a much cleaner and more interpretable track. This allowed clear identification of gene boundaries, transcript organization, and orientation across the genome without the distraction of lower-level details such as exons and CDS.
+
 
 **Visualising the translation table and the orientation**
 
-![Figure:6 Compare the visualization of the original GFF with the simplified GFF](images/GFF_File_comp_narrower.png)
-*Figure:6 Compare the visualization of the original GFF with the simplified GFF*
+![Figure:5 Compare the visualization of the original GFF with the simplified GFF](images/GFF_File_comp_narrower.png)
+*Figure 5: Compare the visualization of the original GFF with the simplified GFF*
 
 **Start and stop codons of a specific gene**
 
-![Figure:7 The Start and Stop codons of a gene in the genome](images/GFF_File_comp_narrower.png)
-*Figure:7 The Start and Stop codons of a gene in the genome*
+![Figure:6 The Start and Stop codons of a gene in the genome](images/start_stop_codon.png)
+*Figure 6: The Start and Stop codons of a gene in the genome*
+
 
