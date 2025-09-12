@@ -70,7 +70,7 @@ f3
 
 **Visualizing the simplified GFF file**
 
-![Figure:2 Visualization of the sinplified GFF file]()
+![Figure:3 Visualization of the Simplified GFF file](images/Simplified GFF annotation.png)
 
 **Compare the visualization of the original GFF with the simplified GFF**
 
@@ -86,3 +86,4 @@ f3
 **Start and stop codons of a specific gene**
 
 ![Figure:7 The Start and Stop codons of a gene in the genome](images/GFF_File_comp_narrower.png)
+
