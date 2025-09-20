@@ -226,6 +226,8 @@ awk -F'\t' '$3=="CDS"' GCF_000001405.39_GRCh38.p13_genomic.gff > CDS_only.gff
 
 **Visualise it in IGV along with the genome file**
 
-![CDS coverage on chromosome 11](images/chr11_CDS.png)
+![CDS coverage on chromosome 11](images/intragenic_spaces.png)
 Figure 1: CDS coverage estimate on chromosome 11 135Mb lenght.
+
 * **Note:** In the 135 Mb stretch of chromosome 11 (NC_000011.10:1–135,086,622), I observed that roughly 60 Mb consists of empty space with no coding sequences. The remaining portion contains genes, introns, and regulatory elements, but only a small fraction represents actual coding sequences. This shows that coding regions are sparsely distributed, and a large part of the genome is made up of intergenic and non-coding DNA.
+
