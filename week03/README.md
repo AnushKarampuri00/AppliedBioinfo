@@ -90,8 +90,13 @@ awk '$3=="gene" || $3=="transcript"' Acetonema_longum_dsm_6540_gca_000219125.ASM
 
 **Start and stop codons of a specific gene**
 
-![Figure:6 The Start and Stop codons of a gene in the genome](images/start_stop_codon.png)
-*Figure 6: The Start and Stop codons of a gene in the genome*
+![Figure:6 The Start codon of a gene in the genome](images/start_codon.png)
+*Figure 6: The Start codon of a gene in the genome*
+
+
+![Figure:7 The Stop codon of a gene in the genome](images/stop_codon.png)
+*Figure 7: The stop codon of a gene in the genome*
+
 
 
 
