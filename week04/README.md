@@ -20,6 +20,12 @@ gunzip *.gz
 
 ```
 
+## Use IGV to visualize the genome
+
+![Genome visualization using IGV](images/complete_gff_annotation.png)
+Figure 1: Genome visualization and annotation using IGV.
+
+
 ## Length of the genome
 
 
@@ -39,7 +45,7 @@ The genome is 3312990637 basepairs long
 grep -v "#" GCF_000001405.39_GRCh38.p13_genomic.gff | cut -f3 | sort | uniq -c | sort -nr
 ```
 
-output
+Output
 
 ```
 2007960 exon
@@ -124,22 +130,28 @@ awk '$3 == "gene" {print $9, $5 - $4}' GCF_000001405.39_GRCh38.p13_genomic.gff |
 
 ```
 
-output:
+Output:
 
 ```
 ID=gene-RBFOX1;Dbxref=GeneID:54715,HGNC:HGNC:18222,MIM:605104;Name=RBFOX1;description=RNA 2473591
 
 ```
 
-explaination:
+**Explaination:**
 
-**Gene name :** RBFOX1 
-**Description :** RNA binding fox-1 homolog 1 (truncated in your output) 
-**Gene length :** 2473591 
-**NCBI Gene ID:** 54715
+Gene name : RBFOX1 
+
+Description : RNA binding fox-1 homolog 1 (truncated in your output) 
+
+Gene length : 2473591 
+
+NCBI Gene ID: 54715
+
 **Function:** Encodes an RNA-binding protein involved in alternative splicing regulation, especially in neuronal tissues.
 
 
+* RBFOX1 is an RNA-binding protein that regulates alternative splicing, especially in the nervous system. It plays a key role in shaping how different isoforms of neural genes are expressed, which is crucial for brain development and function.
+* Variants or disruptions in RBFOX1 have been linked to neurodevelopmental disorders, including autism, epilepsy, and intellectual disability. Because of its role in controlling splicing networks, changes in RBFOX1 can ripple across many pathways involved in neuronal signaling and connectivity.
 
 ## Identifying another gene:
 
@@ -148,11 +160,12 @@ awk '$3 == "gene" {print $9, $5 - $4}' GCF_000001405.39_GRCh38.p13_genomic.gff |
 
 ```
 
-output:
+Output:
 ```
 ID=gene-CNTNAP2;Dbxref=GeneID:26047,HGNC:HGNC:13830,MIM:604569;Name=CNTNAP2;description=contactin 2304791
 ```
-
+* CNTNAP2 (Contactin Associated Protein-Like 2) is a large gene that encodes a member of the neurexin family, proteins important for communication between neurons. It’s highly expressed in the brain, especially in regions involved in language, social behavior, and cognitive function.
+* Variants in CNTNAP2 have been linked to several neurodevelopmental conditions, including autism, epilepsy, and language impairments. Because it plays such a central role in neural connectivity and signaling, disruptions in CNTNAP2 can have wide-reaching effects on brain development and function.
 
 
 ## Analysing the intragenomic space and packing nature of the genome
@@ -177,7 +190,7 @@ grep -v ">" GCF_000001405.39_GRCh38.p13_genomic.fna | tr -d '\n' | wc -c
 
 ```
 
-output:
+Output:
 
 ```
 3272089205
@@ -189,7 +202,7 @@ awk '$3=="gene" {sum += $5-$4} END {print sum}' GCF_000001405.39_GRCh38.p13_geno
 
 ```
 
-output:
+Output:
 
 ```
 1804398806
@@ -227,7 +240,7 @@ awk -F'\t' '$3=="CDS"' GCF_000001405.39_GRCh38.p13_genomic.gff > CDS_only.gff
 **Visualise it in IGV along with the genome file**
 
 ![CDS coverage on chromosome 11](images/intragenic_spaces.png)
-Figure 1: CDS coverage estimate on chromosome 11 135Mb lenght.
+Figure 2: CDS coverage estimate on chromosome 11 135Mb lemgth.
 
 * **Note:** In the 135 Mb stretch of chromosome 11 (NC_000011.10:1–135,086,622), I observed that roughly 60 Mb consists of empty space with no coding sequences. The remaining portion contains genes, introns, and regulatory elements, but only a small fraction represents actual coding sequences. This shows that coding regions are sparsely distributed, and a large part of the genome is made up of intergenic and non-coding DNA.
 
@@ -238,4 +251,5 @@ Looking beyond GRCh38, other genome references can open up new perspectives.
 * The Zika virus genome **(NC_012532.1)** could be used to study viral proteins and how they interact with host responses.
 * The older human build, **GRCh37**, might reveal differences in annotations or alternative isoforms linked to cell cycle control.
 * Meanwhile, a primate genome such as rhesus macaque **(GCF_003339765.1)** could help compare infection patterns across species and point to host-specific resistance factors.
+
 
