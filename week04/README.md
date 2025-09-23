@@ -161,7 +161,7 @@ awk -F'\t' '$3=="CDS"' GCF_000882815.3_ViralProj36615_genomic.gff > CDS_only.gff
 
 **Visualise it in IGV along with the genome file**
 
-![CDS coverage on chromosome 11](images/intragenic_spaces.png)
+![Visualizing the genome of Zika virus in IGV](images/zika_virus.png)
 Figure 1: Visualizing the genome of Zika virus in IGV.
 
 * **Note:** The GFF file for Zika virus contains only a single polyprotein gene (POLY) and its corresponding CDS spanning almost the entire genome. As a result, there are no additional gene or CDS features to display. This is why the annotation track appears empty in IGV at a typical zoom level.
@@ -169,10 +169,11 @@ Figure 1: Visualizing the genome of Zika virus in IGV.
 
 ## Alternative genome builds and research questions
 
-Looking beyond GRCh38, other genome references can open up new perspectives.
-* The Zika virus genome **(NC_012532.1)** could be used to study viral proteins and how they interact with host responses.
-* The older human build, **GRCh37**, might reveal differences in annotations or alternative isoforms linked to cell cycle control.
-* Meanwhile, a primate genome such as rhesus macaque **(GCF_003339765.1)** could help compare infection patterns across species and point to host-specific resistance factors.
+* Comparing different Zika virus genomes helps spot mutations and variations that might affect how the virus behaves and interacts with hosts.
+* Looking at these differences across regions can show how strains are distributed and how the virus spreads or persists in populations.
+* Understanding genomic variations is key for developing vaccines and treatments, since they can influence effectiveness.
+* Examining multiple genome builds also provides evolutionary insights, showing how the virus has adapted over time.
+
 
 
 
