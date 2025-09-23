@@ -1,5 +1,5 @@
 # Retrieving the genomic Data
-I selected the Zika virus-related study (group 2), I have selected the RefSeq assembly GCF_000882815.3 from Zika virus to retrieve the genome and annotation data for analysis.
+I selected the Zika virus-related study (group 2), I have selected the RefSeq assembly GCF_000882815.3 from Zika virus (MR 766 Strain) to retrieve the genome and annotation data for analysis.
 
 ## Download the genome FASTA and GFF files
 
@@ -170,9 +170,15 @@ Figure 1: Visualizing the genome of Zika virus in IGV.
 ## Alternative genome builds and research questions
 
 * Comparing different Zika virus genomes helps spot mutations and variations that might affect how the virus behaves and interacts with hosts.
-* Looking at these differences across regions can show how strains are distributed and how the virus spreads or persists in populations.
-* Understanding genomic variations is key for developing vaccines and treatments, since they can influence effectiveness.
+* Looking at these differences across regions can show how strains are distributed and how the virus spreads in populations.
 * Examining multiple genome builds also provides evolutionary insights, showing how the virus has adapted over time.
+
+* **Other accession numbers:**
+1. GCA_000882815.1 - MR 766 Strain
+2. GCA_004788155.1
+3. GCA_002366285.1 - Natal RGN Strain
+4. GCA_004787195.1 - H/PF/2013 Strain
+5. GCA_004787735.1 - PRVABC-59 Strain
 
 
 
