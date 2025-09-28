@@ -5,12 +5,19 @@
 
 ``` bash
 
-conda create -n sra_env -c bioconda -c conda-forge \
-    entrez-direct \
+# Create a new conda environment for bioinformatics
+conda create -n bioinfo python=3.9 -y
+
+# Activate the environment
+conda activate bioinfo
+
+# Install all required packages
+conda install -c bioconda -y \
     sra-tools \
     fastqc \
-    coreutils
-
+    entrez-direct \
+    multiqc \
+    seqtk
 ```
 
 ## 1. Downloading Data
@@ -85,8 +92,19 @@ REQUIRED_READS = REQUIRED_BASES ÷ AVG_READ_LEN
 
 ## 3. Comparing sequencing platforms:
 
-I have identified another SRA number - SRR34913726. This is from oxford nanopore sequncing method.
+* I have identified another SRA ID - **SRR34913726**. This is from oxford nanopore sequncing method.
 
+The quality metrics calculated are:
 
+```bash output
 
+TOTAL_READS=60
+TOTAL_BASES=101065
+AVG_READ_LENGTH=1684.42
+GENOME_SIZE=10389
+ACTUAL_COVERAGE=9.72
 
+```
+
+Breif comparision
+* The Illumina dataset (SRR32692327) contained thousands of short reads (~91 bp) with high coverage (~36×) and mostly passed all quality metrics, showing only minor warnings in per-base sequence content and some duplication. In contrast, the Oxford Nanopore dataset (SRR34913726) had very few long reads (~1.68 kb) with slightly lower coverage (~9.7×), and several metrics, including per-sequence quality, per-base content, and GC content, showed warnings or errors. Illumina reads are highly uniform and accurate, ideal for detecting small variants, while Nanopore reads are much longer, capturing structural information but with higher error rates and overrepresented sequences. Overall, the two technologies complement each other: Illumina provides depth and precision, whereas Nanopore provides long-range context.
