@@ -22,5 +22,20 @@ Please run the given script - "data_download.sh" script in your working director
 ```bash
 bash data_download.sh
 ```
+* **Note:** I calculated the required number of reads by dividing the total bases needed for 10× coverage by the average read length (150 bp). Then I used fasterq-dump with --row-limit to download only that subset instead of the full dataset.
 
 ## 2. 
+
+ststistics output
+
+```
+TOTAL_READS=4152
+TOTAL_BASES=377832
+AVG_READ_LENGTH=91
+GENOME_SIZE=10389
+ACTUAL_COVERAGE=36.36
+Target coverage: 10x
+```
+
+
+
