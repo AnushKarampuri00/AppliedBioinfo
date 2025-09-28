@@ -2,10 +2,10 @@
 
 set -uexo pipefail
 
-# Step 4: Run FASTQC for quality assessment
+# Step 3: Run FASTQC for quality assessment
 # No changes above this line
 
-echo "=== STEP 4: FASTQC Quality Assessment ==="
+echo "=== STEP 3: FASTQC Quality Assessment ==="
 
 # Find the FASTQ file
 FASTQ_FILE=$(ls *.fastq 2>/dev/null | head -1)
@@ -38,9 +38,9 @@ echo "=== Step 4 complete ==="
 #!/bin/bash
 set -uexo pipefail
 
-# Step 5: Evaluate FASTQC report and summarize findings
+# Step 4: Evaluate FASTQC report and summarize findings
 
-echo "=== STEP 5: FASTQC Report Evaluation ==="
+echo "=== STEP 4: FASTQC Report Evaluation ==="
 
 # Find the FASTQC text report
 FASTQC_DIR=$(find fastqc_results -name "*_fastqc" -type d | head -1)
@@ -87,3 +87,4 @@ echo "FAIL: Serious problems - data may be unusable"
 
 echo "=== Step 5 complete ==="
 # No changes below this line
+
