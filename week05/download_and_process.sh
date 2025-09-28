@@ -6,12 +6,12 @@ set -uexo pipefail
 
 echo "=== STEP 1: Getting SRR numbers ==="
 
-# This is the code from your last assignment
+# This is the code to get the list of SRR numbers and its corresponding experiment data
 esearch -db gds -query "GSE78711" | elink -target sra | efetch -format runinfo > runinfo1.csv
 
 echo "SRA run information saved to runinfo.csv"
 
-# Let's see what's in the file
+# see what's in the file
 echo "First few lines of runinfo1.csv:"
 head -n 3 runinfo1.csv
 
@@ -67,5 +67,6 @@ fasterq-dump "$SRR_NUMBER" \
 
 echo "=== Download Verification ==="
 ls -lh ${SRR_NUMBER}*.fastq || { echo "Download failed"; exit 1; }
+
 
 
