@@ -35,7 +35,7 @@ You can customize the pipeline by modifying these variables at the top of the Ma
 
 ```bash
 
-make -f final.mk
+make -f Makefile.mk
 
 ```
 
@@ -43,7 +43,7 @@ make -f final.mk
 
 ```bash
 
-make -f final.mk download genome index align check
+make -f Makefile.mk download genome index align check
 
 ```
 
@@ -51,11 +51,11 @@ make -f final.mk download genome index align check
 
 ```bash
 
-make -f final.mk download    # Download sequencing reads only
-make -f final.mk genome      # Fetch reference genome only
-make -f final.mk index       # Index the genome only
-make -f final.mk align       # Perform alignment only
-make -f final.mk check       # Check alignment statistics only
+make -f Makefile.mk download    # Download sequencing reads only
+make -f Makefile.mk genome      # Fetch reference genome only
+make -f Makefile.mk index       # Index the genome only
+make -f Makefile.mk align       # Perform alignment only
+make -f Makefile.mk check       # Check alignment statistics only
 
 ```
 
@@ -77,3 +77,4 @@ Coverage across the genome is highly uneven, with multiple high-depth clusters a
 
 ![Visualizing the alignment and coverage in IGV](images/coverage.png)
 Figure 1: Visualizing the alignment and coverage in IGV.
+
