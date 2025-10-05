@@ -75,6 +75,5 @@ make -f final.mk check       # Check alignment statistics only
 
 Coverage across the genome is highly uneven, with multiple high-depth clusters and several uncovered regions visible in IGV. The distribution appears random and indicates non-uniform sequencing coverage.
 
-![Visualizing the alignment and coverage in IGV]()
-Figure 1: Visualizing the genome of Zika virus in IGV.
-
+![Visualizing the alignment and coverage in IGV](images/coverage.png)
+Figure 1: Visualizing the alignment and coverage in IGV.
