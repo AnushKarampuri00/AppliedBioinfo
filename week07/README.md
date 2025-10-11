@@ -141,5 +141,8 @@ samtools view -c SRR34520458.sorted.bam NC_007793.1:3697-3942
 
 IGV Images representing the BigWig file along with BAM and GFF files for _S.Aureus_ genome.
 
+![BigWig Image 1](bigwig_image_1.png)
+
+![BigWig Image 2](bigwig_image_2.png)
 
 
