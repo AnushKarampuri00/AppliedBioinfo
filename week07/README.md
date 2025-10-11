@@ -20,10 +20,11 @@ make -f makefile.mk all SRR=ERR15403387 ACC=NC_007793.1 COVERAGE=15
 
 ## Required Parameters
 
-Parameter	Description	Example
-SRR	SRA Run accession number	SRR=ERR15403387
-ACC	NCBI Reference genome accession	ACC=NC_007793.1
-COVERAGE	Desired sequencing coverage	COVERAGE=15
+| Parameter	| Description	| Example|
+|-----------|-------------|--------|
+|SRR|	SRA Run accession number|	SRR=ERR15403387|
+|ACC|	NCBI Reference genome accession|	ACC=NC_007793.1|
+|COVERAGE|	Desired sequencing coverage|	COVERAGE=15|
 
 ## Output Files
 
@@ -144,5 +145,6 @@ IGV Images representing the BigWig file along with BAM and GFF files for _S.Aure
 ![BigWig Image 1](bigwig_image_1.png)
 
 ![BigWig Image 2](bigwig_image_2.png)
+
 
 
