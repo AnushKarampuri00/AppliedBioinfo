@@ -105,10 +105,10 @@ index: $(REF_GENOME)
 align: $(REF_GENOME)
 	@echo "Aligning reads for $(SAMPLE)..."
 	@if [ -f "$(R1)" ] && [ -f "$(R2)" ]; then \
-		echo "Paired-end alignment"; \
+		echo "Your data has Paired-end alignment"; \
 		bwa mem $(REF_GENOME) $(R1) $(R2) | samtools view -bS - | samtools sort -o $(BAM_FILE); \
 	elif [ -f "$(R1)" ]; then \
-		echo "Single-end alignment"; \
+		echo "Ypur data has Single-end alignment"; \
 		bwa mem $(REF_GENOME) $(R1) | samtools view -bS - | samtools sort -o $(BAM_FILE); \
 	else \
 		echo "No FASTQ files found for $(SAMPLE)"; \
