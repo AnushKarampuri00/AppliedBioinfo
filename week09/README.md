@@ -5,13 +5,18 @@ This readme file provides the code using parallel command for automating the seq
 ## Usage
 
 ```bash
+
+# To check the targets and the usage of this make file
+
+make -f makefile.mk usage
+
 # To download the genome and index it.
 # This step only needs to be run once since the same genome is used for all samples.
 
 make -f makefile.mk genome index
 
 # To run the remaining important tasks other than downloading the genome and indexing, the below input is used.
-# This runs "process_sample", which performs counting reads, aligning, BAM and BigWig file generation using parallel command to iterate over the samples present in the design.csv file.
+# This runs "process_sample", which performs counting reads, aligning, BAM and BigWig file generation (except reference download and indexing tasks) using parallel command to iterate over the samples present in the design.csv file.
  
 cat design.csv | parallel --jobs 3 --colsep , --header : \ make -f makefile.mk process_sample SRR={SRR} SAMPLE={name} COVERAGE={coverage}
 
@@ -62,6 +67,7 @@ It took me around 20 seconds to finish running this code
 make -f makefile.mk all SRR=SRR35862149 SAMPLE=S1 COVERAGE=15
 
 ```
+
 
 
 
