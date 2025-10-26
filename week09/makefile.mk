@@ -4,6 +4,16 @@ SHELL := bash
 .DELETE_ON_ERROR:
 MAKEFLAGS += --warn-undefined-variables --no-builtin-rules
 
+
+usage:
+	@echo "Available targets:"
+	@echo "  all              Run the complete pipeline for all samples (calls genome, index, and per-sample tasks)"
+	@echo "  genome           Download the reference genome (only once)"
+	@echo "  index            Create genome index files"
+	@echo "  process_sample   Run all steps for a single sample: calculate_coverage → download_reads → fastqc → align → stats → bigwig"
+	@echo "  clean            Remove all generated files and directories"
+
+
 # Parameters
 ACCESSION := NC_007793.1
 DESIRED_COVERAGE := $(COVERAGE)
