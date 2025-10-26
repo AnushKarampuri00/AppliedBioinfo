@@ -23,8 +23,9 @@ REF_GENOME := $(REF_DIR)/$(ACCESSION).fa
 $(shell mkdir -p $(READ_DIR) $(REF_DIR) $(BAM_DIR) $(BIGWIG_DIR) $(FASTQC_DIR) $(TEMP_DIR))
 
 # Master target
-all: genome index parallel_run
-	@echo " Full alignment completed for all samples in design.csv"
+all: genome index calculate_coverage download_reads fastqc align stats bigwig
+	@echo "Finished processing individual samples using "all" target."
+
 
 # Download reference genome (this will be done only once)
 genome:
