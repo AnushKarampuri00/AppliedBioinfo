@@ -53,5 +53,16 @@ It took 20 seconds approximately to finish running this code
 
 ```
 
+## To run single sample
+
+```bash
+
+# use "all" for running a single sample, this way all the tasks from reference downloading till bigwig file generation will run sequentially.
+
+make -f makefile.mk all SRR=SRR35862149 SAMPLE=S1 COVERAGE=15
+
+```
+
+
 
 
