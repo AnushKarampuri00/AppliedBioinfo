@@ -44,7 +44,7 @@ This makefile generates the below given directories and saves the files accordin
   |-bigwig
 ```
 
-It took 20 seconds approximately to finish running this code
+It took me around 20 seconds to finish running this code
 ```bash
 
 [main] Version: 0.7.19-r1273
@@ -62,6 +62,7 @@ It took 20 seconds approximately to finish running this code
 make -f makefile.mk all SRR=SRR35862149 SAMPLE=S1 COVERAGE=15
 
 ```
+
 
 
 
