@@ -35,6 +35,16 @@ The design file contains three columns:
 3. Coverage required (I included this to have the code calculate the required reads for different coverages for all the samples)
 
 
+## To run single sample
+
+```bash
+
+# use "all" for running a single sample, this way all the tasks from reference downloading till bigwig file generation will run sequentially.
+
+make -f makefile.mk all SRR=SRR35862149 SAMPLE=S1 COVERAGE=15
+
+```
+
 
 ## Output
 
@@ -58,15 +68,8 @@ It took me around 20 seconds to finish running this code
 
 ```
 
-## To run single sample
 
-```bash
 
-# use "all" for running a single sample, this way all the tasks from reference downloading till bigwig file generation will run sequentially.
-
-make -f makefile.mk all SRR=SRR35862149 SAMPLE=S1 COVERAGE=15
-
-```
 
 
 
