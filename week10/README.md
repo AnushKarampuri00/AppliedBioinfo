@@ -23,6 +23,10 @@ make -f makefile.mk all  SRR=SRR35862149 SAMPLE=S1 COVERAGE=17
 
 make -f makefile.mk genome index
 
+# preview the commands before executing (Dry run)
+cat design.csv | parallel --jobs 3 --colsep , --header : --eta --bar --verbose \
+make --dry-run -f makefile_2.mk process_sample SRR={SRR} SAMPLE={name} COVERAGE={coverage}
+
 # Run multiple samples from design.csv file uing GNU parallel
 # Included "eta, bar, and verbose" to see the real time progress
 
@@ -39,6 +43,7 @@ make -f multiple_vcf.mk all
 ## IGV Visualization
 
 ![BigWig Image 1](Week_10.png)
+
 
 
 
