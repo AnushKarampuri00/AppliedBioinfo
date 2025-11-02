@@ -38,6 +38,8 @@ make -f multiple_vcf.mk all
 
 ## IGV Visualization
 
+# ![BigWig Image 1](bigwig_image_1.png)
+
 
 
 
