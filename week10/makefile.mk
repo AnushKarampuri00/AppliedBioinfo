@@ -28,6 +28,36 @@ REF_GENOME := $(REF_DIR)/$(ACCESSION).fa
 # Create directories
 $(shell mkdir -p $(READ_DIR) $(REF_DIR) $(BAM_DIR) $(VCF_DIR) $(BIGWIG_DIR) $(FASTQC_DIR) $(TEMP_DIR))
 
+usage:
+	@echo "==================== USAGE ===================="
+	@echo ""
+	@echo "Single sample run:"
+	@echo "  make -f makefile.mk all SRR=<SRA_ID> SAMPLE=<sample_name> COVERAGE=<desired_coverage>"
+	@echo ""
+	@echo "Multi-sample run using design.csv:"
+	@echo "  cat design.csv | parallel --jobs 3 --colsep , --header : --eta --bar --verbose \\"
+	@echo "  make -f makefile.mk process_sample SRR={SRR} SAMPLE={name} COVERAGE={coverage}"
+	@echo ""
+	@echo "Targets description:"
+	@echo "  genome           - Download reference genome (once)"
+	@echo "  index            - Index reference genome (once)"
+	@echo "  process_sample   - Complete per-sample workflow (coverage calc, download reads, QC, align, stats, VCF, BigWig)"
+	@echo "  calculate_coverage - Compute number of reads needed for target coverage"
+	@echo "  download_reads   - Download FASTQ reads from SRA"
+	@echo "  fastqc           - Run FastQC on reads"
+	@echo "  align            - Align reads to reference genome and index BAM"
+	@echo "  stats            - Compute alignment statistics"
+	@echo "  vcf              - Call variants and index VCF file"
+	@echo "  bigwig           - Generate BigWig coverage track"
+	@echo "  clean            - Remove all generated files and directories"
+	@echo ""
+	@echo "Example design.csv format (for parallel multi-sample runs):"
+	@echo "  name,SRR,coverage"
+	@echo "  S1,SRR35862149,15"
+	@echo "  S2,SRR35862150,20"
+	@echo "==============================================="
+
+
 # Master target (for single sample)
 all: genome index process_sample
 	@echo "✅ Full pipeline completed for sample $(SAMPLE) ($(SRR)) with $(COVERAGE)X coverage"
