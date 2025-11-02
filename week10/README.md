@@ -27,7 +27,7 @@ make -f makefile.mk genome index
 # Included "eta, bar, and verbose" to see the real time progress
 
 cat design.csv | parallel --jobs 3 --colsep , --header : --eta --bar --verbose \
-make -f makefile_2.mk process_sample SRR={SRR} SAMPLE={name} COVERAGE={coverage}
+make -f makefile.mk process_sample SRR={SRR} SAMPLE={name} COVERAGE={coverage}
 
 
 # After variant calling, we can use the below make file (multiple_vcf.mk) to merge the vcf files and perform indexing to it.
@@ -35,6 +35,10 @@ make -f makefile_2.mk process_sample SRR={SRR} SAMPLE={name} COVERAGE={coverage}
 make -f multiple_vcf.mk all
 
 ```
+
+## IGV Visualization
+
+
 
 
 
