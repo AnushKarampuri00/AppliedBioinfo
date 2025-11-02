@@ -40,9 +40,24 @@ make -f multiple_vcf.mk all
 
 ```
 
+# Description of tasks from the makefile
+
+| Task                | Description                                                                 |
+|----------------------|------------------------------------------------------------------------------|
+| calculate_coverage   | Determines how many reads to download based on genome size and desired coverage |
+| download_reads       | Downloads only the required number of reads from SRA                        |
+| fastqc               | Generates quality control reports for the downloaded reads                  |
+| genome               | Fetches the reference genome sequence                                       |
+| index                | Creates index files for the reference genome                                |
+| align                | Aligns reads to the reference and creates sorted BAM files                  |
+| stats                | Generates alignment statistics and metrics                                  |
+| bigwig               | Creates BigWig coverage tracks from aligned reads                           |
+| vcf                  | Calling variants                                                            |
+
 ## IGV Visualization
 
 ![BigWig Image 1](Week_10.png)
+
 
 
 
