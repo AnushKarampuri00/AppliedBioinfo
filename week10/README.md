@@ -3,6 +3,15 @@
 This assignment consists of two makefiles, one for variant calling and the other makefile to merge the samples and make a multiple sample vcf file. This script is extended from the previous assignment by including another target named vcf.
 
 
+
+
+## Usage 
+
+```bash
+
+make -f makefile.mk usage
+
+```
 ## To run the script on single sample
 
 ```bash
@@ -34,13 +43,14 @@ cat design.csv | parallel --jobs 3 --colsep , --header : --eta --bar --verbose \
 make -f makefile.mk process_sample SRR={SRR} SAMPLE={name} COVERAGE={coverage}
 
 
-# After variant calling, we can use the below make file (multiple_vcf.mk) to merge the vcf files and perform indexing to it.
+# After variant calling, use the below make file (multiple_vcf.mk) to merge the vcf files and perform indexing to it.
 
 make -f multiple_vcf.mk all
 
 ```
 
-# Description of tasks from the makefile
+
+## Description of tasks from the makefile
 
 | Task                | Description                                                                 |
 |----------------------|------------------------------------------------------------------------------|
@@ -57,6 +67,7 @@ make -f multiple_vcf.mk all
 ## IGV Visualization
 
 ![BigWig Image 1](Week_10.png)
+
 
 
 
