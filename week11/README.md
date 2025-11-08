@@ -52,6 +52,12 @@ To work on multiple samples
 cat design.csv | parallel --jobs 3 --colsep , --header : --eta --bar --verbose \ make -f makefile.mk process_sample SRR={SRR} SAMPLE={name} COVERAGE={coverage}
 ```
 
+To merge the VCF files 
+
+```bash
+make -f multiple_vcf.mk all
+```
+
 ## Variants identified
 
 To select three varinats from a sample
@@ -121,28 +127,17 @@ This is also in the same general region, affecting the same set of genes.
 
 **Quality:** High quality (123.415).
 
+## HTML Summary file
+
+![HTML Summary file](images/summary_1.png)
 
 
 
+![HTML Summary file](images/summary_2.png)
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+![HTML Summary file](images/summary_3.png)
 
 
 
