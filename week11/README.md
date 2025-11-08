@@ -54,6 +54,95 @@ cat design.csv | parallel --jobs 3 --colsep , --header : --eta --bar --verbose \
 
 ## Variants identified
 
+To select three varinats from a sample
+
+```bash
+
+grep -v '^#' S1_annotated.vcf | head -n 3 > s1_subset.vcf
+
+```
+
+**Variant 1: Position 89 G>A**
+
+* **Basic Change:**  G to A substitution at position 89.
+
+* **Genotype:** Homozygous Alternate (1/1). The individual has two 'A' alleles at this position.
+
+* **Impact:** It is an Upstream Gene Variant (MODIFIER). This variant is located before the start of the gene.
+
+* **Key Affected Genes & Distance from Start:**
+
+1. dnaA: 455 bases
+2. dnaN: 2094 bases
+3. recF: 3850 bases
+4. gyrB: 4972 bases
+
+* **Quality:** High quality (124.416).
+
+
+
+**Variant 2: Position 93 G>A**
+
+* **Basic Change:**  G to A substitution at position 93.
+
+* **Genotype:** Homozygous Alternate (1/1).
+
+* **Impact:** Upstream Gene Variant (MODIFIER).
+
+* **Key Affected Genes & Distance from Start:**
+
+This variant is very close to the first one, just 4 bases away. The distances are slightly different:
+
+1. dnaA: 451 bases
+2. dnaN: 2090 bases
+3. recF: 3846 bases
+4. gyrB: 4968 bases
+
+**Quality:** Also high quality (124.416) with identical read support.
+
+
+
+**Variant 3: position 116 C>T**
+
+* **Basic Change:**  C to T substitution at position 116.
+
+* **Genotype:** Homozygous Alternate (1/1).
+
+* **Impact:** Upstream Gene Variant (MODIFIER).
+
+* **Key Affected Genes & Distance from Start:** 
+
+This is also in the same general region, affecting the same set of genes.
+
+1. dnaA: 428 bases
+2. dnaN: 2067 bases
+3. recF: 3823 bases
+4. gyrB: 4945 bases
+
+**Quality:** High quality (123.415).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
