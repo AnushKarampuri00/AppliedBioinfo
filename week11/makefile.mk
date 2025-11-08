@@ -202,6 +202,7 @@ annotate_merged:
 	@echo "   - Genes TXT: $(ANNOTATION_DIR)/merged/merged_multisample_snpEff_genes.txt"
 
 # Complete workflow: merge and annotate (run after all samples)
+# This is not included in process_sample because this step is only for multiple samples.
 finalize: merge_vcfs annotate_merged
 	@echo "✅ All VCF files merged and annotated successfully!"
 	@echo ""
