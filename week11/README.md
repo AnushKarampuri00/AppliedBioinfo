@@ -40,23 +40,49 @@ ls -l ./data/Staphylococcus_aureus_subsp_aureus_usa300_fpr3757_gca_000013465/
 
 ## Usage
 
-To work with single sample
+Primary task is to download the genome and index it
 
 ```bash
-make -f makefile.mk all  SRR=SRR35862149 SAMPLE=S1 COVERAGE=17
+make -f makefile.mk genome index
+```
+
+To work with a single sample 
+
+```bash
+make -f makefile.mk process_sample SRR=SRR35862149 SAMPLE=S1 COVERAGE=17
 ```
 
 To work on multiple samples
 
 ```bash
-cat design.csv | parallel --jobs 3 --colsep , --header : --eta --bar --verbose \ make -f makefile.mk process_sample SRR={SRR} SAMPLE={name} COVERAGE={coverage}
+cat design.csv | parallel --jobs 3 --colsep , --header : --eta --bar --verbose \
+  make -f makefile.mk process_sample SRR={SRR} SAMPLE={name} COVERAGE={coverage}
+
+
+# To merge the VCF files - if you work with multiple samples this step is needed
+
+make -f makefile.mk finalize
 ```
 
-To merge the VCF files 
 
-```bash
-make -f multiple_vcf.mk all
-```
+Description of tasks from the makefile
+
+| Task                | Description                                                                 |
+|----------------------|------------------------------------------------------------------------------|
+| calculate_coverage   | Determines how many reads to download based on genome size and desired coverage |
+| download_reads       | Downloads only the required number of reads from SRA                        |
+| fastqc               | Generates quality control reports for the downloaded reads                  |
+| genome               | Fetches the reference genome sequence                                       |
+| index                | Creates index files for the reference genome                                |
+| process_sample       | Complete pipeline for individual sample                                     |
+| align                | Aligns reads to the reference and creates sorted BAM files                  |
+| stats                | Generates alignment statistics and metrics                                  |
+| bigwig               | Creates BigWig coverage tracks from aligned reads                           |
+| vcf                  | Calling variants                                                            |
+| merge_vcfs           | merge the generated vcf files                                               |
+| vcf_annotation       | performs annotation using snpeff tool                                       |
+| finalize             | This performs merging vcf and annotating the merged vcf file                |
+
 
 ## Variants identified
 
@@ -138,6 +164,7 @@ This is also in the same general region, affecting the same set of genes.
 
 
 ![HTML Summary file](images/summary_3.png)
+
 
 
 
