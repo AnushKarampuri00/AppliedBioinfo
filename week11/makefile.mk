@@ -1,5 +1,3 @@
-# USAGE : cat design.csv | parallel --jobs 3 --colsep , --header : --eta --bar --verbose \
-# make -f makefile_2.mk process_sample SRR={SRR} SAMPLE={name} COVERAGE={coverage}
 
 SHELL := bash
 .ONESHELL:
