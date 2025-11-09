@@ -86,72 +86,56 @@ Description of tasks from the makefile
 
 ## Variants identified
 
-To select three varinats from a sample
 
-```bash
+**Variant 1: Position 2,865,224 T>A**
 
-grep -v '^#' S1_annotated.vcf | head -n 3 > s1_subset.vcf
+*  **Basic Change:** T to A substitution at position 2,865,224.
 
-```
+* **Genotype:** Homozygous Alternate (1/1) in all samples except Sample8 (missing).
 
-**Variant 1: Position 89 G>A**
+* **Impact:** Missense Variant (MODERATE) — results in an amino acid change from Glutamic acid (Glu) to Aspartic acid (Asp) at position 52 (p.Glu52Asp) in the coding region.
 
-* **Basic Change:**  G to A substitution at position 89.
+**Key Affected Genes & Region Context:**
 
-* **Genotype:** Homozygous Alternate (1/1). The individual has two 'A' alleles at this position.
+* **Primary gene:** ENSB:2zQP9zbD3cehAHU - it is a protein-coding gene
 
-* **Impact:** It is an Upstream Gene Variant (MODIFIER). This variant is located before the start of the gene.
+**Additional context:** Multiple downstream and upstream variants noted across neighboring genes such as bceB_3, cspLA, and rsmG, mostly MODIFIER effects.
 
-* **Key Affected Genes & Distance from Start:**
+* **Quality:** High (225.417); DP=104, with 100+ reads supporting the alternate allele.
 
-1. dnaA: 455 bases
-2. dnaN: 2094 bases
-3. recF: 3850 bases
-4. gyrB: 4972 bases
+**Variant 2: Position 612,319 C>T**
 
-* **Quality:** High quality (124.416).
+* **Basic Change:** C to T substitution at position 612,319.
+
+* **Genotype:** Homozygous Alternate (1/1) in all samples except Sample8 (missing).
+
+* **Impact:** Synonymous Variant (LOW) — does not alter the amino acid sequence (p.Phe391Phe) in the sdrC gene.
+
+**Key Affected Genes & Region Context:**
+
+* **Primary gene:** sdrC — synonymous change in the coding region.
+
+* **Nearby genes:** Upstream variants in dck, dgk, and sdrD; downstream variants in tadA_1, ywpJ_1, and azo1, all MODIFIER effects.
+
+* **Quality:** High (225.417); DP=129, well-supported by multiple reads.
+
+**Variant 3: Position 612,864 T>C**
+
+* **Basic Change:** T to C substitution at position 612,864.
+
+* **Genotype:** Homozygous Alternate (1/1) across all eight samples.
+
+* **Impact:** Missense Variant (MODERATE) — amino acid substitution Valine (Val) → Alanine (Ala) at position 573 (p.Val573Ala) within sdrC.
+
+* **Key Affected Genes & Region Context:**
+
+* **Primary gene:** sdrC — moderate effect within same gene as Variant 2.
+
+* **Additional context:** Upstream and downstream effects in genes like dck, dgk, and tadA_1 (all MODIFIER).
+
+* **Quality:** High (225.417); DP=82 with strong alternate allele support.
 
 
-
-**Variant 2: Position 93 G>A**
-
-* **Basic Change:**  G to A substitution at position 93.
-
-* **Genotype:** Homozygous Alternate (1/1).
-
-* **Impact:** Upstream Gene Variant (MODIFIER).
-
-* **Key Affected Genes & Distance from Start:**
-
-This variant is very close to the first one, just 4 bases away. The distances are slightly different:
-
-1. dnaA: 451 bases
-2. dnaN: 2090 bases
-3. recF: 3846 bases
-4. gyrB: 4968 bases
-
-**Quality:** Also high quality (124.416) with identical read support.
-
-
-
-**Variant 3: position 116 C>T**
-
-* **Basic Change:**  C to T substitution at position 116.
-
-* **Genotype:** Homozygous Alternate (1/1).
-
-* **Impact:** Upstream Gene Variant (MODIFIER).
-
-* **Key Affected Genes & Distance from Start:** 
-
-This is also in the same general region, affecting the same set of genes.
-
-1. dnaA: 428 bases
-2. dnaN: 2067 bases
-3. recF: 3823 bases
-4. gyrB: 4945 bases
-
-**Quality:** High quality (123.415).
 
 ## HTML Summary file
 
@@ -164,6 +148,7 @@ This is also in the same general region, affecting the same set of genes.
 
 
 ![HTML Summary file](images/summary_3.png)
+
 
 
 
