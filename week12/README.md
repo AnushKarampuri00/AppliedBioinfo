@@ -20,6 +20,12 @@ Please refer to the below image
 ![SMAD4_Chromosome_location](images/SMAD4_Chr18.png)
 
 ## Usage
+* To perform the complete analysis i perfoemd in this assignment, please use the below command!
+
+```bash
+bash Alignment_comparision.sh
+```
+
 * Below code is used to download the chromosome 18 segment from the human reference genome assembly 'GRCh38'.
 
 ```bash
@@ -154,3 +160,4 @@ samtools flagstat ${BAM}
 **Control and Tumor samples from Pacific biosciences**
 
 ![PacBio](images/PacBio.png)
+
