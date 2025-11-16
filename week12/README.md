@@ -17,7 +17,7 @@
 
 Please refer to the below image
 
-\\\\image\\\\
+![SMAD4_Chromosome_location](images/SMAD4_Chr18.png)
 
 ## Usage
 * Below code is used to download the chromosome 18 segment from the human reference genome assembly 'GRCh38'.
@@ -140,4 +140,17 @@ samtools flagstat ${BAM}
 * By Mapping Quality: All platforms good (>58.97), with Element Biosciences slightly leading
 * By Coverage Uniformity: Illumina > Element Biosciences > Pacific Biosciences > Oxford Nanopore
 
+## IGV Visualization
 
+
+**Control and Tumor samples from Element Biosciences**
+
+![Element_Biosciences](images/Element_Biosciences.png)
+
+**Control and Tumor samples from Illumina platform**
+
+![Illumina](images/Illumina.png)
+
+**Control and Tumor samples from Pacific biosciences**
+
+![PacBio](images/PacBio.png)
