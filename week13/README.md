@@ -63,3 +63,4 @@ Description of tasks from the makefile
 I tried to check if the read counts i saw in the  count matrix i calculated with the IGV alignment, and the results reflect the same. 
 I checked for two genes from sample 1
 dnaA, which showed 138 reads and located from 544 bp to 1905 bp and cstR, which showed 0 reads and located from 92713 bp to 92973 bp. The IGV results also show the same results.
+
