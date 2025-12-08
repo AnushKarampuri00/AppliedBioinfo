@@ -1,0 +1,9 @@
+SRR,name,coverage,condition
+SRR35862149,control_1,5,control
+SRR35862151,control_2,15,control
+SRR35862152,control_3,10,control
+SRR35862153,control_4,6,control
+SRR35862154,treatment_1,7,treatment
+SRR35862155,treatment_2,4,treatment
+SRR35862156,treatment_3,12,treatment
+SRR35862157,treatment_4,17,treatment
