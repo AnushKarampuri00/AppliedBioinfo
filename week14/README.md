@@ -79,21 +79,10 @@ Description of tasks from the makefile
 | clean               | Removes all generated files and directories                                 |
 
 
-## IGV Visualization
+## DE Results Visualization
 
-![](images/1_1.png)
+![](results/gene_expression_heatmap.png)
 
-![](images/1_2.png)
+![](results/pca_plot.png)
 
-* The above IGV screenshots represent the presence of aligned reads at the annotated genes and absent at the regions where the gff annotations are empty which reflects that the alinged segments are RNA reads
-
-![](images/2_1.png)
-
-![](images/2_2.png)
-
-
-I tried to check if the read counts i saw in the  count matrix i calculated with the IGV alignment, and the results reflect the same. 
-I checked for two genes from sample 1
-dnaA, which showed 138 reads and located from 544 bp to 1905 bp and cstR, which showed 0 reads and located from 92713 bp to 92973 bp. The IGV results also show the same results.
-
-
+![](results/volcano_plot.png)
