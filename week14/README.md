@@ -52,6 +52,14 @@ Or run all DE analysis steps at once:
 
 ============================================================
 
+# For gene enrichment analysis
+# Install Genescape
+pip install genescape
+
+# Launch the web server
+genescape web
+
+# This will redirect to a interactive browser where a list of differentially expressed genes can be given to check the biological function in which the genes are enriched in.
 ```
 
 
@@ -74,7 +82,7 @@ Description of tasks from the makefile
 | count_matrix        | Counts reads per gene across all samples and generates the count matrix     |
 | differential_expression | Performs differential expression analysis                               |
 | visualizations |     Generates heatmaps and PCA plots for the differential expression results     |
-| enrichment |    performs enrichment analysis / this step can also be done useing genescape library |
+| enrichment |    performs enrichment analysis / this step can also be done useing genescape web |
 | full_de_analysis | This will perform DE analysis, visualization and enrichment all together|
 | clean               | Removes all generated files and directories                                 |
 
@@ -86,3 +94,5 @@ Description of tasks from the makefile
 ![](results/pca_plot.png)
 
 ![](results/volcano_plot.png)
+
+![](results/Gene_enrichment.png)
