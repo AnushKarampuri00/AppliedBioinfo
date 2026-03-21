@@ -1,3 +1,3 @@
 # AppliedBioinformatics
 
-## This repository contains the weekly assignments 
+## This repository contains the weekly assignments for Applied bioinformatics class!
